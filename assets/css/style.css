@@ -18,12 +18,18 @@ body {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 0 10%;
     padding: 25px;
     background-color: #ffffff;
     border: 2px solid #dddddd;
     flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
 }
+@media screen and (min-width: 980px) {
+    .container {
+      width: 60%;
+      margin: 0 0 0 10%;
+    }
+  }
 
 header {
     margin: 0 0 50px 0;
@@ -34,7 +40,7 @@ header {
 }
 
 .navbar {
-    width: 960px;
+    width: 80%;
     margin: auto;
 }
 nav {
@@ -62,6 +68,14 @@ nav a:hover {
     font-family: Georgia, 'Times New Roman', Times, serif;
     float: left;
 }
+@media screen and (max-width: 640px) {
+    .logo, .navbar, nav {
+      position: static;
+      width: 100%;
+      float: none;
+    text-align: center
+      }
+  }
 hr {
     border: 1px solid #dddddd;
     margin: 0 0 20px 0;
